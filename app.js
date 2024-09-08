@@ -3,8 +3,10 @@ const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 8080 });
 
 wss.on('connection', function connection(ws) {
-    console.log("s")
+    console.log("snnn")
   ws.on('message', function incoming(message) {
+    console.log("snnnk")
+
     const data = JSON.parse(message);
     const orderId = data.orderId;
 
